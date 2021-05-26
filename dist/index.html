@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Not A Weather App</title>
 </head>
 <body>
-    <div id="top"></div>
-    <h2>Not Weather App</h2>
-    <form novalidate>
-        <input type="text" id="city" placeholder="Enter city name" required pattern="[a-zA-Z]+">
-        <span class="error" aria-live="polite"></span>
-        <button type="submit" id="submit">Search</button>
-    </form>
-    <div id="main"></div>
-    <footer></footer>
+    <div id="top">
+        <form novalidate>
+            <input type="text" id="city" placeholder="Enter city name" required pattern="[a-zA-Z]+">
+            <span class="error" aria-live="polite"></span>
+            <button type="button" id="button">Search</button>
+        </form>
+        <p id="title">Not A Weather App</p>
+    </div>
+    <div id="main">
+        <div id="left-container">
+            <div id="city-name-display"></div>
+            <div id="temp-display"></div>
+        </div>
+        <div id="right-container">
+            <div id="weather-display"></div>
+            <img id="weather-icon" src="">
+            <div id="temperature-range"></div>
+        </div>
+        <div id="bottom">
+        </div>
+    </div>
+    <footer>
+        <p id="loading-time"></p>
+    </footer>
 </body>
 <script src="main.js"></script>
 </html>

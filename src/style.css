@@ -1,5 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: #333;
+    color: #bbb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
+    line-height: 1.5rem;
+}
+#top {
+    display: flex;
+    height: 10%;
+    min-height: 100px;
+}
+#title {
+    width: 75vh;
+    text-align: end;
+    font-size: 32px;
+}
+form {
+    margin: 40px 10px 10px 10px;
+    padding: 5px;
+    width: 50%;    
+}
+input {
+    height: 24px;
+    width: 70%;
+}
+#button {
+    padding: 0;
+    height: 34px;
+    width: 100px;
+    background-color: #b42;
+    border: none;
+    border-radius: 1px;
+    color: inherit;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+#button:hover{
+    background-color: #f65;
+    font-weight: bold;
+}
+#main {
+    display: flex;
+    background-color: #111;
+    height: 70vh;
+    text-align: center;
+}
+#left-container {
+    width: 30%;
+    line-height: 72px;
+    padding-top: 15vh;
+}
+#city-name-display {
+    font-size: 36px;
+}
+#temp-display {
+    font-size: 72px;
+}
+#right-container {
+    padding-top: 20px;
+}
+#right-container img {
+    height: 10rem;
 }

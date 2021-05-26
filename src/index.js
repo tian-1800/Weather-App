@@ -1,11 +1,10 @@
 import "./style.css";
 import getWeather from "./api";
 
-const form = (() => {
+const formRead = () => {
   const userInput = document.getElementById("city");
   const city = userInput.value;
   const error = userInput.nextElementSibling;
-  const button = document.getElementById("submit");
 
   const showError = () => {
     if (userInput.validity.valueMissing) {
@@ -14,20 +13,13 @@ const form = (() => {
       error.textContent = "Must be all alphabet character";
     }
   };
-  const init = () => {
-    button.addEventListener("click", () => {
-      if (userInput.validity.valid) {
-        getWeather(city);
-      } else {
-        showError();
-        event.preventDefault();
-      }
-    });
-  };
 
-  return {
-    init,
-  };
-})();
+  if (userInput.validity.valid) {
+    getWeather(city);
+  } else {
+    showError();
+  }
+};
 
-form.init();
+const button = document.getElementById("button");
+button.addEventListener("click", formRead);
